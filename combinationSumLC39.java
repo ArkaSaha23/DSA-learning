@@ -1,3 +1,5 @@
+//Backtracking (Main Technique)
+//It means:Make a choice → Explore → Undo the choice
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> mylist =  new ArrayList<>();
