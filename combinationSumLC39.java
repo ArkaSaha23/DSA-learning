@@ -21,6 +21,6 @@ class Solution {
         sublist.add(candidates[index]);
         combination(mylist,sublist,candidates,target,sum+candidates[index],index);
         sublist.remove(sublist.size() - 1);
-        combination(mylist,sublist,candidates,target,sum,index+1);
+        combination(mylist,sublist,candidates,target,sum,index+1);    //calling next number
     }
 }
