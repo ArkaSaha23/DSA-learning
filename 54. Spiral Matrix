@@ -5,23 +5,31 @@ class Solution {
         int left=0;
         int right=matrix[0].length-1;
         List<Integer> list=new ArrayList<>();
+
         while(top<=buttom && left<=right)
         {
+            //move left to right, top=constant
             for(int i=left;i<=right;i++){  
                list.add(matrix[top][i]);
             }
             top++;
+
+            //move top to buttom, right=constant
             for(int i=top;i<=buttom;i++){
                 list.add(matrix[i][right]);
             }
             right--;
-            if(top<=buttom){
+
+            //move right to left, buttom=constant
+            if(top <= buttom){ //edge cases
                 for(int i=right;i>=left;i--){
                     list.add(matrix[buttom][i]);
                 }
                 buttom--;
             }
-            if(left <= right){
+
+            //move buttom to top, left=constant
+            if(left <= right){ //edge cases
                 for(int i=buttom;i>=top;i--){
                     list.add(matrix[i][left]);
                 }
