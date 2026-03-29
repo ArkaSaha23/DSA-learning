@@ -1,0 +1,41 @@
+class Solution {
+    public int[][] generateMatrix(int n) {
+        int top=0;
+        int buttom=n-1;
+        int left=0;
+        int right=n-1;
+        int arr[][]=new int[n][n];
+        int c=1;
+        while(top <= buttom && right <= right){
+
+            //move left to right , top = constant
+            for(int i=left ;i<= right ;i++){
+                arr[top][i]=c++;
+            }
+            top++;
+
+            //move top to buttom,right = constant
+            for(int i=top ;i<= buttom ;i++){
+                arr[i][right]=c++;
+            }
+            right--;
+
+            //move right to left, buttom = constant
+            if(top <= right){
+                for(int i=right ;i >= left ;i--){
+                    arr[buttom][i]=c++;
+                }
+                buttom--;
+            }
+
+            //move buttom to top, left=constant
+            if(left <= right){
+                for(int i=buttom ;i>=top;i--){
+                    arr[i][left]=c++;
+                }
+                left++;
+            }
+        }
+        return arr;
+    }
+}
