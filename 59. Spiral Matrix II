@@ -6,7 +6,7 @@ class Solution {
         int right=n-1;
         int arr[][]=new int[n][n];
         int c=1;
-        while(top <= buttom && right <= right){
+        while(top <= buttom && left <= right){
 
             //move left to right , top = constant
             for(int i=left ;i<= right ;i++){
