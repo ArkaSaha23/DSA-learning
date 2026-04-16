@@ -11,6 +11,7 @@ class Solution {
         if(freq == 0) {
             ans = nums[i];
         }
+        //now check for the frequenty of current 'ans' element
         if(ans == nums[i]){
             freq++;
         }else{
