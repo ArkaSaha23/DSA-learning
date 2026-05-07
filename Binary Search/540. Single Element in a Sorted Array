@@ -4,7 +4,7 @@ class Solution {
         int left = 0;
         int right = n-1;
 
-        //single element array
+        //SINGLE ELEMENT ARRAY
         if(n==1){    
             return nums[0];
         }
@@ -13,11 +13,11 @@ class Solution {
         {
             int mid = left +(right-left)/2;
 
-            if(mid == 0 && nums[0] != nums[1])           //edge case when first element is single element
+            if(mid == 0 && nums[0] != nums[1])           //EDGE CASE WHEN FIRST ELEMENT IS SINGLE ELEMENT
             {
                 return nums[0];
             } 
-            if(mid == n-1 && nums[n-1] != nums[n-2])     //edge case when last element is single element
+            if(mid == n-1 && nums[n-1] != nums[n-2])     //EDGE CASE WHEN LAST ELEMENT IS SINGLE ELEMENT
             {
                 return nums[n-1];
             }
@@ -27,24 +27,24 @@ class Solution {
             }
 
             //reduce the search space
-            if(mid % 2==0)                               //even number of left and right halves of mid
+            if(mid % 2==0)                               //EVEN NUMBER OF LEFT AND RIGHT HALVES OF MID
             {
-                if(nums[mid] == nums[mid-1])             //single element is on the left side 
+                if(nums[mid] == nums[mid-1])             //SINGLE ELEMENT IS ON THE LEFT SIDE,(UPDATE RIGHT)
                 {
                     right = mid-1;
                 }
-                else                                     //single element is on the right side 
+                else                                     //SINGLE ELEMENT IS ON THE RIGHT SIDE(UPDATE LEFT)
                 {
                     left = mid +1;
                 }
             }
-            else if( mid % 2 != 0)                       //odd number of left and right halves of mid
+            else if( mid % 2 != 0)                       //ODD NUMBER OF LEFT AND RIGHT HALVES OF MID
             {
-                if(nums[mid] == nums[mid-1])            //single element is on the rightt side 
+                if(nums[mid] == nums[mid-1])            //SINGLE ELEMENT IS ON THE RIGHT SIDE(UPDATE LEFT)
                 {
                     left = mid +1;   
                 }
-                else                                    //single element is on the left side 
+                else                                    //SINGLE ELEMENT IS ON THE LEFT SIDE (UPDATE RIGHT)
                 {
                     right = mid-1;
                 }
