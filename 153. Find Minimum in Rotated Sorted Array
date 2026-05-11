@@ -6,6 +6,7 @@ class Solution {
         int right = n-1;
         int ans = Integer.MAX_VALUE;
 
+        //if a sorted halve id found take that minimum and update the left and rioght pointer...besically remove that halve from the serach space
         while(left <= right)
         {
             int mid = left + (right - left)/2;
