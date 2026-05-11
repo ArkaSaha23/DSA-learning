@@ -23,14 +23,14 @@ class Solution {
         }
         
         int ans=-1;
-        for(int i=0;i<n;i++){       //CALCULATE THE TOTAL SUM OF PAGES TO GET THE RANGE FROM 0 TO SUM
+        for(int i=0;i<n;i++){       //CALCULATE THE TOTAL SUM OF PAGES TO GET THE RANGE FROM 0 TO SUM , Time complexity = O(n)
             sum+=arr[i];
         }
        
         int left = 0;
         int right = sum;
         
-        while(left <= right){
+        while(left <= right){                        // Time complexity = O(log(n) * n)....n because of function used
             int mid = left +(right-left)/2;
             
             /*IN ORDER TO DECREASE THE SEARCH SPACE WE HAVE TO FIND OUT WHICH ONE OF 
@@ -51,7 +51,8 @@ class Solution {
         }
         return ans;
     } 
-    boolean isValid(int arr[],int n,int k,int midMaxPage) {
+    boolean isValid(int arr[],int n,int k,int midMaxPage)      //Time complexity = O(n)
+    {
         int studentCount=1;
         int pages=0;
         for(int i=0;i<n;i++)
