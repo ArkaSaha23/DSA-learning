@@ -6,7 +6,8 @@ class Solution {
         int right = n-1;
         int ans = Integer.MAX_VALUE;
 
-        //if a sorted halve id found take that minimum and update the left and rioght pointer...besically remove that halve from the serach space
+        //IF A SORTED HALF IF FOUND TAKE THAT MINIMUM VALUE(EITHER ARR[MID] OR ARR[LEFT]) AND UPDATE THE LEFT AND RIOGHT POINTER...
+        //BESICALLY REMOVE THAT HALF FROM THE SERACH SPACE
         while(left <= right)
         {
             int mid = left + (right - left)/2;
