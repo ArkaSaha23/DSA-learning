@@ -3,6 +3,7 @@
 1s: low → mid-1     //current element
 unknown: mid → high //it consist of unsorted elements
 2s: high+1 → n-1    //next position for 2
+//mid is the pointer wicj will traverse through the list
 */
 
 class Solution {
