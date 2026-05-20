@@ -1,4 +1,4 @@
-/**
+/*
  * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
@@ -9,21 +9,23 @@
  * }
  */
 class Solution {
-    public ListNode swapPairs(ListNode head) {
+    public ListNode swapPairs(ListNode head) 
+    {
         ListNode ptr=new ListNode(-1);
         ptr.next=head;
 
         ListNode prev=ptr;
         ListNode cur=head;
-        while(cur!=null && cur.next!=null){
+        
+        while(cur!=null && cur.next!=null)
+        {
             prev.next=cur.next;
             cur.next=cur.next.next;
             prev.next.next=cur;
-            prev=cur; //shift prev pointer
-            cur=cur.next;//shift the cur pointer
+            prev=cur;                 //shift prev pointer
+            cur=cur.next;            //shift the cur pointer
 
         }
-
         return ptr.next;
     }
 }
