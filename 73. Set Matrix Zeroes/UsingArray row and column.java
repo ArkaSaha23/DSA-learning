@@ -1,3 +1,7 @@
+/*Time Complexity: O(m × n)
+Space Complexity: O(m + n)
+use two arrays and use them as row and column pointers
+    */
 class Solution {
     public void setZeroes(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
